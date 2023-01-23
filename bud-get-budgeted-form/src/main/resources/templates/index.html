@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="https://www.thymeleaf.org"> 
+
+    <head> 
+        <title>BudGetBudgeted - Calculator </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+        <header>
+
+            <h1><strong>BudGetBudgeted</strong></h1>
+            <h2>A simple and predictive budgeting tool.</h2>
+      
+        </header>
+
+        <form action="#" th:action="@{/budgeting}" th:object="${budgeting}" method="post">
+        <!--- Monthly Income --->
+        <div>
+            <header>
+            <h3><strong>Monthly Income</strong></h3>
+            </header>
+        </div>
+
+        <div>
+            <label>Monthly Salary:</label>
+            <input type="number" th:field="*{salary}" min="0" required >
+        </div>
+        
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+
+    </form>
+
+
+    </body>
+
+
+</html>
